@@ -1,0 +1,365 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Empower A2 Unit 7-9 Review</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: exam-paper stack. Plum title band + sticky timer bar + numbered grid, then 5 sections in the exact order of the final exam format. */
+:root{
+  --bg:#f5f2f5; --card:#ffffff; --ink:#27202a; --muted:#6c6270; --line:#e1dbe3;
+  --plum:#4a1530; --plum-ink:#ffffff; --accent:#8b2a63; --accent-soft:#f3e4ed;
+  --blue:#0b6bc4; --grey-bar:#9aa1aa;
+  --ok:#17794a; --ok-bg:#e1f4ea; --bad:#b3261e; --bad-bg:#fbe5e3; --sel-bg:#eaf2fb;
+  --font:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#171218; --card:#221b24; --ink:#efe9f0; --muted:#a79bab; --line:#392e3c;
+  --plum:#3a1027; --accent:#e08fc0; --accent-soft:#35202f; --blue:#6db3f5; --grey-bar:#5d6470;
+  --ok:#5fd09a; --ok-bg:#16301f; --bad:#ff8f86; --bad-bg:#3a1b1a; --sel-bg:#1c2a3b; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#171218; --card:#221b24; --ink:#efe9f0; --muted:#a79bab; --line:#392e3c;
+  --plum:#3a1027; --accent:#e08fc0; --accent-soft:#35202f; --blue:#6db3f5; --grey-bar:#5d6470;
+  --ok:#5fd09a; --ok-bg:#16301f; --bad:#ff8f86; --bad-bg:#3a1b1a; --sel-bg:#1c2a3b; color-scheme:dark;}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.55;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--plum)}
+.wrap{max-width:900px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.stripes{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;height:8px;margin-top:0}
+.stripes i{display:block}.stripes i:nth-child(1){background:var(--plum)}.stripes i:nth-child(2){background:var(--accent)}.stripes i:nth-child(3){background:var(--grey-bar)}
+.band{background:var(--plum);color:var(--plum-ink);padding-block:22px 20px;margin-top:8px}
+.band h1{margin:0;font-size:clamp(1.5rem,5vw,2.25rem);line-height:1.15;font-weight:700;letter-spacing:.01em;text-wrap:balance}
+.band p{margin:6px 0 0;font-size:clamp(1rem,3vw,1.25rem);font-weight:500;opacity:.92}
+.band b{font-weight:800}
+.rules{color:var(--blue);font-weight:700;text-align:center;padding-block:16px 4px;font-size:1.02rem}
+.rules small{display:block;font-weight:600;font-size:.95rem}
+
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.bar .wrap{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-block:8px}
+.timer{font-variant-numeric:tabular-nums;font-weight:800;font-size:1.5rem;letter-spacing:.02em;min-width:4.6ch}
+.timer.low{color:var(--bad)}
+.prog{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.sp{flex:1}
+button{font:inherit;cursor:pointer}
+.btn{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:7px 14px;border-radius:8px;font-weight:600;font-size:.9rem}
+.btn:hover{border-color:var(--accent)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:#fff}
+[data-theme="dark"] .btn.pri{color:#1a0f16}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.pri{color:#1a0f16}}
+.btn.ghost{background:transparent}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.mode{display:flex;align-items:center;gap:6px;font-size:.85rem;color:var(--muted)}
+.mode input{accent-color:var(--accent);width:16px;height:16px}
+
+.grid{display:flex;flex-wrap:wrap;gap:4px;padding-block:10px}
+.grid button{width:32px;height:30px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--muted);font-size:.78rem;font-weight:600;padding:0;font-variant-numeric:tabular-nums}
+.grid button.done{background:var(--accent);border-color:var(--accent);color:#fff}
+[data-theme="dark"] .grid button.done{color:#1a0f16}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .grid button.done{color:#1a0f16}}
+.grid button.ok{background:var(--ok-bg);border-color:var(--ok);color:var(--ok)}
+.grid button.bad{background:var(--bad-bg);border-color:var(--bad);color:var(--bad)}
+.gridnote{font-size:.78rem;color:var(--muted);padding-bottom:8px}
+
+details.cheat{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+details.cheat summary{cursor:pointer;padding:12px 16px;font-weight:700;color:var(--accent)}
+.cheat .cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;padding:4px 16px 16px}
+.cheat h4{margin:0 0 6px;font-size:.95rem;color:var(--blue)}
+.cheat ul{margin:0;padding-left:18px;font-size:.88rem}
+.cheat li{margin-bottom:4px}
+.cheat code{font-family:inherit;background:var(--accent-soft);padding:0 4px;border-radius:4px;font-weight:600}
+
+section.part{margin-top:34px}
+.ph{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;border-bottom:2px solid var(--accent);padding-bottom:8px;margin-bottom:6px}
+.ph .rn{color:var(--accent);font-weight:800;font-size:1.5rem;min-width:2.4ch}
+.ph h2{margin:0;font-size:1.2rem;font-weight:800;letter-spacing:.01em;flex:1;min-width:0}
+.ph .ct{font-size:.82rem;font-weight:700;color:var(--muted);background:var(--accent-soft);padding:2px 10px;border-radius:999px}
+.instr{color:var(--blue);font-weight:600;margin:6px 0 14px;font-size:.95rem}
+
+.passage{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:14px}
+.passage h3{margin:0 0 8px;font-size:1.05rem;color:var(--accent)}
+.passage p{margin:0 0 10px;max-width:68ch}.passage p:last-child{margin-bottom:0}
+.gap{display:inline-block;min-width:3.2em;text-align:center;border-bottom:2px solid var(--accent);color:var(--accent);font-weight:800;padding:0 4px;margin:0 2px;font-size:.9em}
+
+.q{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:12px;scroll-margin-top:130px}
+.q.ok{border-color:var(--ok)}.q.bad{border-color:var(--bad)}
+.qt{display:flex;gap:10px}
+.qn{font-weight:800;color:var(--accent);min-width:2.2ch;font-variant-numeric:tabular-nums}
+.qx{white-space:pre-line;min-width:0;flex:1}
+.blank{display:inline-block;width:5.5em;border-bottom:2px solid var(--ink);vertical-align:-2px;margin:0 2px}
+.unit{font-size:.7rem;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 6px;height:1.5em;align-self:flex-start;white-space:nowrap}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;padding-left:calc(2.2ch + 10px)}
+@media (max-width:560px){.opts{grid-template-columns:1fr;padding-left:0}}
+.opt{display:flex;gap:10px;align-items:flex-start;text-align:left;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;padding:8px 10px;min-width:0;font-size:.95rem}
+.opt .l{font-weight:800;color:var(--accent);flex:none;width:1.2em}
+.opt:hover:not(:disabled){border-color:var(--accent)}
+.opt.sel{background:var(--sel-bg);border-color:var(--blue)}
+.opt.right{background:var(--ok-bg);border-color:var(--ok)}
+.opt.right .l{color:var(--ok)}
+.opt.wrong{background:var(--bad-bg);border-color:var(--bad)}
+.opt.wrong .l{color:var(--bad)}
+.opt:disabled{cursor:default}
+.ex{margin:10px 0 0;padding:8px 12px;border-radius:8px;background:var(--accent-soft);font-size:.9rem;padding-left:12px}
+.ex b{color:var(--accent)}
+
+.result{margin-top:22px;background:var(--card);border:2px solid var(--accent);border-radius:12px;padding:18px}
+.result h2{margin:0 0 4px}
+.score{font-size:2.4rem;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums}
+.score small{font-size:1rem;color:var(--muted);font-weight:600}
+.rows{display:grid;gap:8px;margin-top:12px}
+.row{display:grid;grid-template-columns:minmax(0,12rem) 1fr 4.5ch;align-items:center;gap:10px;font-size:.88rem}
+@media (max-width:520px){.row{grid-template-columns:1fr 4.5ch}.row .meter{grid-column:1/-1;order:3}}
+.meter{height:10px;background:var(--accent-soft);border-radius:999px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--accent)}
+.row span:last-child{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.confirm{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding-block:8px;font-size:.9rem}
+.foot{text-align:center;color:var(--muted);font-size:.8rem;padding-block:30px 40px}
+</style>
+
+<div class="stripes" aria-hidden="true"><i></i><i></i><i></i></div>
+<header class="band"><div class="wrap">
+  <h1>FINAL EXAM REVIEW</h1>
+  <p>TIME ALLOWED: <b>60 MINS</b> · Empower A2 Elementary · Units 7–9</p>
+</div></header>
+<div class="wrap rules">WRITE THE ANSWERS ON YOUR MCQ ANSWER SHEET<small>(No materials are allowed.)</small></div>
+
+<div class="bar" id="bar"><div class="wrap">
+  <div class="timer" id="timer" aria-live="off">60:00</div>
+  <button class="btn" id="startBtn" type="button">Bắt đầu</button>
+  <div class="prog" id="prog">0/50</div>
+  <div class="sp"></div>
+  <label class="mode"><input type="checkbox" id="practice"> Luyện tập (xem đáp án ngay)</label>
+  <button class="btn pri" id="submitBtn" type="button">Nộp bài</button>
+</div></div>
+
+<main class="wrap">
+  <div class="grid" id="grid" role="navigation" aria-label="Danh sách câu hỏi"></div>
+  <div class="gridnote">Bấm số để nhảy tới câu. Ô tím là câu đã chọn.</div>
+  <div id="confirmBox" class="confirm" hidden></div>
+  <div id="result" hidden></div>
+
+  <details class="cheat"><summary>Tóm tắt kiến thức Unit 7–9 (xem nhanh trước khi làm)</summary>
+  <div class="cg">
+    <div><h4>Unit 7 · Trips</h4><ul>
+      <li>Quá khứ đơn: <code>did + S + V?</code>, <code>didn't + V</code></li>
+      <li>Phương tiện: ferry, tram, coach, metro, taxi, on foot</li>
+      <li><code>love / like / don't mind / hate + V-ing</code></li>
+      <li>Tính từ: crowded, comfortable, convenient, cheap, fast</li>
+      <li>Xin lỗi: <i>Excuse me. / I'm sorry. / That's OK.</i></li>
+      <li><code>after, when, while</code>; WORDPOWER <code>get</code> (get home, get up)</li></ul></div>
+    <div><h4>Unit 8 · Fit and healthy</h4><ul>
+      <li><code>can / can't</code> (hiện tại), <code>could / couldn't</code> (quá khứ)</li>
+      <li><i>do</i> yoga · <i>go</i> running · <i>play</i> tennis</li>
+      <li><code>have to</code> (bắt buộc) · <code>don't have to</code> (không cần)</li>
+      <li>Cơ thể: hands, feet, knees, ears…</li>
+      <li>Sức khỏe: headache, stomach ache · <i>I'm sorry to hear that.</i></li>
+      <li>Nối câu: <code>and, but, so, because</code> · <code>However,</code> · <code>tell sb</code> / <code>say</code> · trạng từ cách thức (carefully)</li></ul></div>
+    <div><h4>Unit 9 · Clothes and shopping</h4><ul>
+      <li>Hiện tại tiếp diễn: <code>am/is/are + V-ing</code> (đang làm)</li>
+      <li>Hiện tại đơn (thói quen) vs tiếp diễn (bây giờ)</li>
+      <li>Quần áo: coat, jacket, jumper, sandals, shorts</li>
+      <li>Tiền: price, change, receipt, discount, cash, card</li>
+      <li><i>Can I try it on? · Here you are. · Can I pay by card?</i></li>
+      <li>Khen: <i>I love your jacket! – Thanks!</i> · WORDPOWER <code>time</code> (have a good time)</li></ul></div>
+  </div></details>
+
+  <div id="parts"></div>
+  <div class="foot">Biên soạn theo cấu trúc đề: 20 + 5 + 10 + 10 + 5 = 50 câu · Nội dung bám Empower Elementary/A2 Unit 7–9 (7A–9D).</div>
+</main>
+
+<script>
+var L=['A','B','C','D'];
+var PARTS=[
+{rn:'I',title:'VOCABULARY & GRAMMAR',instr:'Choose words that best fit the sentences.',blocks:[{qs:[
+{u:'7A',t:'Where ____ you go on holiday last summer?',o:['do','did','are','were'],a:1,e:'Câu hỏi quá khứ đơn: did + S + V (last summer = quá khứ).'},
+{u:'7A',t:"I didn't ____ the film because I was very tired.",o:['enjoyed','enjoying','enjoy','enjoys'],a:2,e:"didn't + động từ nguyên mẫu."},
+{u:'7A',t:'We crossed the river by ____ because there is no bridge in this area.',o:['ferry','tram','coach','taxi'],a:0,e:'Không có cầu thì qua sông bằng phà (ferry).'},
+{u:'7B',t:'My sister loves ____ her bike to school.',o:['ride','to riding','rode','riding'],a:3,e:'love / like / hate / don\'t mind + V-ing.'},
+{u:'7B',t:"I don't like taking buses in the city centre. They are always ____, and I can't find a seat.",o:['empty','crowded','quiet','cheap'],a:1,e:'crowded = đông đúc, nên không còn chỗ ngồi.'},
+{u:'7D',t:'I listened to music ____ I was waiting for the bus.',o:['after','then','while','because'],a:2,e:'while + hành động diễn ra cùng lúc (was waiting).'},
+{u:'7D',t:'What time do you usually ____ home from school?',o:['get','make','take','have'],a:0,e:'get home = về đến nhà (WORDPOWER get).'},
+{u:'8A',t:"When I was five, I ____ swim, but now I swim every day.",o:['can','can\'t','could','couldn\'t'],a:3,e:'Quá khứ không làm được: couldn\'t. "but now" cho thấy trước đây chưa biết bơi.'},
+{u:'8A',t:'Ben ____ play the guitar very well when he was six because he started lessons at four.',o:['can','could','couldn\'t','can\'t'],a:1,e:'Khả năng trong quá khứ (when he was six): could.'},
+{u:'8A',t:'I ____ yoga every Monday evening; it helps me relax.',o:['play','go','do','make'],a:2,e:'do yoga. (play + môn bóng, go + V-ing).'},
+{u:'8B',t:'You wear gloves on your ____ in winter.',o:['hands','feet','ears','knees'],a:0,e:'gloves = găng tay, đeo ở bàn tay (hands).'},
+{u:'8B',t:"At the swimming pool, you ____ wear a swimming cap. It's the rule.",o:["don't have to",'can','has to','have to'],a:3,e:'have to = bắt buộc; chủ ngữ you nên dùng have (không phải has).'},
+{u:'8B',t:"You ____ pay to enter the park. It's free.",o:['have to',"don't have to","can't",'has to'],a:1,e:"don't have to = không cần phải (vì miễn phí)."},
+{u:'8D',t:'My doctor ____ me to do more exercise.',o:['said','spoke','told','talked'],a:2,e:'tell + người + to V. say không đi trực tiếp với "me".'},
+{u:'9A',t:"Sorry, I can't talk now. I ____ for the bus.",o:['wait','waits','waited','am waiting'],a:3,e:'"now" = đang diễn ra: hiện tại tiếp diễn am waiting.'},
+{u:'9B',t:'My mother usually ____ a skirt to work, but today she ____ trousers.',o:['wears / is wearing','is wearing / wears','wears / wears','is wearing / is wearing'],a:0,e:'usually → hiện tại đơn (wears); today → hiện tại tiếp diễn (is wearing).'},
+{u:'9B',t:"It's snowing. Put on your ____ and scarf.",o:['sandals','coat','shorts','swimsuit'],a:1,e:'Trời tuyết nên mặc áo khoác (coat).'},
+{u:'9A',t:'The T-shirt cost $15. I gave the assistant $20, and she gave me $5 ____.',o:['receipt','price','change','discount'],a:2,e:'change = tiền thối lại.'},
+{u:'9C',t:'This T-shirt is too small. Do you have a bigger ____?',o:['size','price','colour','bag'],a:0,e:'bigger size = cỡ lớn hơn.'},
+{u:'9D',t:'Thank you for the present. We had a really good ____ at your party.',o:['clock','watch','minute','time'],a:3,e:'have a good time = vui vẻ (WORDPOWER time).'}
+]}]},
+{rn:'II',title:'CONVERSATION',instr:'Find the best responses.',blocks:[{qs:[
+{u:'7C',t:'Anna: Oh, I\'m so sorry! I stepped on your foot.\nKen: ____',o:['Excuse me, please.',"That's all right. Don't worry.",'Thank you very much.','Yes, I did it.'],a:1,e:'Đáp lại lời xin lỗi: That\'s all right / Don\'t worry.'},
+{u:'8C',t:"Tom: I don't feel well. I've got a terrible stomach ache.\nMai: ____ Do you want to see a doctor?",o:["That's great!",'Well done!',"Oh, I'm sorry to hear that.",'Nice to meet you.'],a:2,e:'Thể hiện sự cảm thông khi ai đó bị ốm.'},
+{u:'9C',t:"Customer: I really like this jumper, but I'm not sure about the size.\nAssistant: ____ The changing rooms are over there.",o:['Would you like to try it on?','Do you want to pay by card?','Is it a present?','How much is it?'],a:0,e:'Phòng thử đồ → gợi ý mặc thử (try it on).'},
+{u:'9C',t:'Sue: I love your new jacket! It looks great on you.\nPam: ____ I bought it in the sale last weekend.',o:["No, it isn't.",'Sorry about that.',"You're welcome.","Thank you! I'm glad you like it."],a:3,e:'Được khen thì đáp: Thank you! …'},
+{u:'9C',t:"Assistant: That's $35, please.\nCustomer: ____ Can I pay by card?",o:["You're welcome.",'Here you are.',"I'm sorry I'm late.","It's too big."],a:1,e:'Đưa tiền / đưa thẻ cho người bán: Here you are.'}
+]}]},
+{rn:'III',title:'READING COMPREHENSION',instr:'Read the two passages and choose the best answer A, B, C or D.',blocks:[
+{p:{h:'Passage 1 · A Day Trip to Da Nang',ps:['Last Saturday, my friends Mai and Nam and I took a day trip from Hue to Da Nang. We didn\'t go by bus because buses are often crowded at weekends, so we took the train. I love travelling by train because I don\'t mind sitting for a long time, and the views of the sea and the mountains are wonderful. The journey took about three hours. Mai hates getting up early, so she was late and we nearly missed the train!','In Da Nang, we rented bikes and cycled along the beach. Nam couldn\'t ride fast because his bike was very old, but we didn\'t mind. For lunch, we went to a small café and I tried mi Quang for the first time. It was delicious! In the afternoon, we took a taxi to the Marble Mountains. It was cheap because the three of us shared it. We got home at 9 p.m. I was tired, but I had a great time.']},qs:[
+{u:'7A',t:'How did the friends travel from Hue to Da Nang?',o:['By bus','By plane','By train','By taxi'],a:2,e:'"…so we took the train."'},
+{u:'7B',t:"Why didn't they take the bus?",o:['It was too expensive.','It is often crowded at weekends.','It was too slow.','Nam hates buses.'],a:1,e:'"buses are often crowded at weekends".'},
+{u:'8A',t:"Why couldn't Nam ride fast?",o:['He was very tired.','It was raining.','He had a headache.','His bike was old.'],a:3,e:'"Nam couldn\'t ride fast because his bike was very old".'},
+{u:'7A',t:'What did the writer do for the first time in Da Nang?',o:['Eat mi Quang','Ride a bike','Visit the beach','Take a taxi'],a:0,e:'"I tried mi Quang for the first time."'},
+{u:'9A',t:'Why was the taxi cheap?',o:['The driver was a friend.','It was a short trip.','The three friends shared it.','They had a discount card.'],a:2,e:'"It was cheap because the three of us shared it."'}]},
+{p:{h:'Passage 2 · A Post from Hoa',ps:['Hi everyone! It\'s January and it\'s −10°C here in Toronto. Right now I\'m sitting in a café, and I\'m wearing a thick coat, a hat, gloves and boots. In Vietnam, I usually wear a T-shirt and sandals, but here people wear warm clothes every day.','Shopping is different too. I\'m looking for a winter jacket at the moment, but they\'re very expensive. My friend Sara is helping me, and this weekend we\'re going to a market to look for a cheap second-hand jacket.','People here also do a lot of sport in winter. I couldn\'t skate last year, but now I\'m learning at the ice rink every Sunday. I fall down a lot. However, I love it!']},qs:[
+{u:'9A',t:'Where is Hoa?',o:['In Hanoi','In Toronto','In London','At the ice rink'],a:1,e:'"…here in Toronto. Right now I\'m sitting in a café".'},
+{u:'9B',t:'What is Hoa wearing now?',o:['A coat, a hat, gloves and boots','A T-shirt and sandals','A second-hand jacket','A swimsuit and a hat'],a:0,e:'"I\'m wearing a thick coat, a hat, gloves and boots." (T-shirt và sandals là đồ cô ấy mặc ở Việt Nam.)'},
+{u:'9C',t:'Why is Hoa going to a market this weekend?',o:['To meet her family','To learn to skate','To buy sports shoes','To look for a cheap jacket'],a:3,e:'"…going to a market to look for a cheap second-hand jacket."'},
+{u:'8A',t:"What couldn't Hoa do last year?",o:['Ride a bike','Swim','Skate','Ski'],a:2,e:'"I couldn\'t skate last year".'},
+{u:'8D',t:'What does Hoa say about skating?',o:['She is very good at it.','She falls down a lot, but she loves it.','She practises every Saturday.',"She doesn't like it."],a:1,e:'"I fall down a lot. However, I love it!" (học vào Chủ nhật).'}]}
+]},
+{rn:'IV',title:'READING: GAP-FILLING',instr:'Read the passage and choose the best word or phrase for each numbered blank.',blocks:[
+{p:{h:'Learning to Swim',ps:['When I was a child, I {36} swim, so I was afraid of water. I also hated {37} sport at school. Last year, my friend Duc {38} me, "Swimming is a great way to get fit." So I joined a swimming club near my house. At first I was very slow, {39} now I can swim 500 metres without stopping!','The club has some rules. Members {40} wear a swimming cap in the pool. It\'s a rule. But you {41} bring a towel because the club has plenty of them. The teachers explain the exercises {42}, so beginners feel safe.','I love my club. {43}, it\'s quite far from my home, so I go there by bus twice a week. Look at the photo: I {44} my new blue swimsuit, and my friends are laughing next to me. We always have a great {45} together.']},qs:[
+{u:'8A',t:'(36)',o:["couldn't",'can\'t','could','can'],a:0,e:'Quá khứ + "so I was afraid of water" → couldn\'t swim.'},
+{u:'7B',t:'(37)',o:['do','to doing','doing','did'],a:2,e:'hate + V-ing.'},
+{u:'8D',t:'(38)',o:['said','told','spoke','talked'],a:1,e:'told me, "…": tell + người.'},
+{u:'8C',t:'(39)',o:['so','because','or','but'],a:3,e:'Đối lập (chậm → bây giờ bơi được 500 m): but.'},
+{u:'8B',t:'(40)',o:["don't have to",'have to','can','has to'],a:1,e:'Luật bắt buộc, chủ ngữ Members: have to.'},
+{u:'8B',t:'(41)',o:["don't have to",'have to',"can't",'has to'],a:0,e:'Câu lạc bộ có sẵn khăn → không cần mang: don\'t have to.'},
+{u:'8D',t:'(42)',o:['careful','care','carefully','carefulness'],a:2,e:'Trạng từ cách thức bổ nghĩa cho động từ explain: carefully.'},
+{u:'8D',t:'(43)',o:['So','Because','Or','However'],a:3,e:'However, = Tuy nhiên (đối lập với "I love my club").'},
+{u:'9A',t:'(44)',o:['wear','wore','am wearing','wears'],a:2,e:'"Look at the photo" → đang diễn ra: am wearing.'},
+{u:'9D',t:'(45)',o:['time','weather','money','size'],a:0,e:'have a great time.'}]}
+]},
+{rn:'V',title:'SENTENCE TRANSFORMATION',instr:'Choose the sentence that has similar meaning to the original sentence(s).',blocks:[{qs:[
+{u:'9C',t:"I didn't buy the jumper because it was too expensive.",o:['I bought the jumper, but it was too expensive.','The jumper was cheap, so I bought it.',"I didn't buy the jumper because it was too cheap.","The jumper was too expensive, so I didn't buy it."],a:3,e:'because ↔ so: nguyên nhân (đắt) → kết quả (không mua).'},
+{u:'8B',t:'It isn\'t necessary to wear a uniform at the club.',o:["You can't wear a uniform at the club.","You don't have to wear a uniform at the club.",'You have to wear a uniform at the club.','You must wear a uniform every day at the club.'],a:1,e:"isn't necessary = don't have to."},
+{u:'7B',t:'Sam thinks sitting in traffic jams is terrible.',o:['Sam loves sitting in traffic jams.',"Sam doesn't mind sitting in traffic jams.",'Sam hates sitting in traffic jams.','Sam sometimes enjoys traffic jams.'],a:2,e:'Thấy rất tệ = hate + V-ing.'},
+{u:'8A',t:'My grandfather was a good swimmer when he was young.',o:['My grandfather could swim well when he was young.',"My grandfather couldn't swim when he was young.",'My grandfather has to swim every day.',"My grandfather doesn't have to swim anymore."],a:0,e:'was a good swimmer = could swim well.'},
+{u:'7D',t:'We arrived in Rome. Then we had lunch.',o:['We had lunch before we arrived in Rome.','While we arrived in Rome, we had lunch.',"We had lunch because we didn't arrive in Rome.",'After we arrived in Rome, we had lunch.'],a:3,e:'Hai việc nối tiếp nhau: After + việc xảy ra trước.'}
+]}]}
+];
+
+/* flatten */
+var QS=[],n=0;
+PARTS.forEach(function(p,pi){p.count=0;p.blocks.forEach(function(b){b.qs.forEach(function(q){n++;q.n=n;q.part=pi;p.count++;QS.push(q);});});});
+var TOTAL=QS.length,TIME=3600;
+var st={ans:{},submitted:false,practice:false,left:TIME,running:false,timerId:null,started:false};
+
+function $(id){return document.getElementById(id);}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function save(){try{localStorage.setItem('emp79',JSON.stringify({a:st.ans,l:st.left,p:st.practice,s:st.started,sub:st.submitted}));}catch(e){}}
+function load(){try{var d=JSON.parse(localStorage.getItem('emp79')||'null');if(d){st.ans=d.a||{};st.left=typeof d.l==='number'?d.l:TIME;st.practice=!!d.p;st.started=!!d.s;st.submitted=!!d.sub;}}catch(e){}}
+
+function build(){
+  var h='';
+  PARTS.forEach(function(p){
+    h+='<section class="part"><div class="ph"><span class="rn">'+p.rn+'.</span><h2>'+p.title+'</h2><span class="ct">'+p.count+' MCQs</span></div><div class="instr">'+esc(p.instr)+'</div>';
+    p.blocks.forEach(function(b){
+      if(b.p){
+        h+='<div class="passage"><h3>'+esc(b.p.h)+'</h3>'+b.p.ps.map(function(t){return '<p>'+esc(t).replace(/\{(\d+)\}/g,'<span class="gap">($1) ____</span>')+'</p>';}).join('')+'</div>';
+      }
+      b.qs.forEach(function(q){
+        var isGap=/^\(\d+\)$/.test(q.t);
+        var text=isGap?'Chọn đáp án cho chỗ trống '+q.t:esc(q.t).replace(/_{3,}/g,'<span class="blank"></span>');
+        h+='<div class="q" id="q'+q.n+'"><div class="qt"><span class="qn">'+q.n+'.</span><div class="qx">'+text+'</div><span class="unit" title="Bài trong sách">'+q.u+'</span></div><div class="opts" role="radiogroup" aria-label="Câu '+q.n+'">';
+        q.o.forEach(function(o,i){h+='<button type="button" class="opt" data-q="'+q.n+'" data-i="'+i+'" role="radio" aria-checked="false"><span class="l">'+L[i]+'.</span><span>'+esc(o)+'</span></button>';});
+        h+='</div><div class="ex" hidden></div></div>';
+      });
+    });
+    h+='</section>';
+  });
+  $('parts').innerHTML=h;
+  var g='';for(var i=1;i<=TOTAL;i++)g+='<button type="button" data-go="'+i+'" id="g'+i+'" aria-label="Câu '+i+'">'+i+'</button>';
+  $('grid').innerHTML=g;
+}
+
+function fmt(s){var m=Math.floor(s/60),x=s%60;return (m<10?'0':'')+m+':'+(x<10?'0':'')+x;}
+function renderTimer(){var t=$('timer');t.textContent=fmt(st.left);t.className='timer'+(st.left<=300?' low':'');}
+function startTimer(){
+  if(st.running||st.submitted||st.practice)return;
+  st.running=true;st.started=true;$('startBtn').textContent='Tạm dừng';
+  st.timerId=setInterval(function(){st.left--;renderTimer();if(st.left%10===0)save();if(st.left<=0){stopTimer();submit(true);}},1000);
+}
+function stopTimer(){st.running=false;clearInterval(st.timerId);$('startBtn').textContent=st.started&&!st.submitted?'Tiếp tục':'Bắt đầu';}
+
+function paintQ(q){
+  var box=$('q'+q.n),btns=box.querySelectorAll('.opt'),sel=st.ans[q.n],reveal=st.submitted||(st.practice&&sel!==undefined);
+  btns.forEach(function(b,i){
+    var c='opt';
+    if(reveal){if(i===q.a)c+=' right';else if(i===sel)c+=' wrong';}else if(i===sel)c+=' sel';
+    b.className=c;b.setAttribute('aria-checked',i===sel?'true':'false');b.disabled=st.submitted||(st.practice&&sel!==undefined);
+  });
+  var ex=box.querySelector('.ex');
+  if(reveal){
+    var ok=sel===q.a;
+    box.className='q '+(sel===undefined?'bad':ok?'ok':'bad');
+    ex.hidden=false;
+    ex.innerHTML='<b>'+(sel===undefined?'Chưa trả lời. ':ok?'Đúng. ':'Sai. ')+'Đáp án: '+L[q.a]+'.</b> '+esc(q.e);
+  }else{box.className='q';ex.hidden=true;}
+  var gb=$('g'+q.n);
+  gb.className=reveal?(sel===q.a?'ok':'bad'):(sel!==undefined?'done':'');
+}
+function paintAll(){QS.forEach(paintQ);progress();}
+function progress(){$('prog').textContent=Object.keys(st.ans).length+'/'+TOTAL;}
+
+function pick(qn,i){
+  if(st.submitted)return;
+  var q=QS[qn-1];
+  if(st.practice&&st.ans[qn]!==undefined)return;
+  st.ans[qn]=i;
+  if(!st.practice&&!st.running&&!st.started)startTimer();
+  paintQ(q);progress();save();
+}
+
+function submit(auto){
+  if(st.submitted)return;
+  stopTimer();st.submitted=true;$('confirmBox').hidden=true;
+  paintAll();save();showResult(auto);
+  $('submitBtn').textContent='Làm lại';
+  $('startBtn').disabled=true;
+  $('result').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function showResult(auto){
+  var per=PARTS.map(function(){return 0;}),total=0;
+  QS.forEach(function(q){if(st.ans[q.n]===q.a){per[q.part]++;total++;}});
+  var used=TIME-st.left,rows='';
+  PARTS.forEach(function(p,i){var pc=Math.round(per[i]/p.count*100);rows+='<div class="row"><span>'+p.rn+'. '+p.title+'</span><div class="meter"><i style="width:'+pc+'%"></i></div><span>'+per[i]+'/'+p.count+'</span></div>';});
+  var wrong=QS.filter(function(q){return st.ans[q.n]!==q.a;}).map(function(q){return q.u;});
+  var weak={};wrong.forEach(function(u){weak[u]=(weak[u]||0)+1;});
+  var wk=Object.keys(weak).sort(function(a,b){return weak[b]-weak[a]||a.localeCompare(b);}).slice(0,5).map(function(u){return 'Unit '+u+' ('+weak[u]+' câu)';}).join(', ');
+  var r=$('result');r.hidden=false;
+  r.innerHTML='<h2>Kết quả'+(auto?' (hết giờ)':'')+'</h2><div class="score">'+total+'<small> / '+TOTAL+' câu đúng · '+(total/TOTAL*10).toFixed(1)+'/10</small></div>'
+   +(st.practice?'':'<div style="color:var(--muted);font-size:.88rem">Thời gian làm bài: '+fmt(used)+'</div>')
+   +'<div class="rows">'+rows+'</div>'
+   +(wk?'<p style="margin:14px 0 0"><b>Nên ôn lại:</b> '+wk+'. Kéo xuống để xem giải thích từng câu.</p>':'<p style="margin:14px 0 0"><b>Tuyệt vời, đúng hết 50 câu!</b></p>');
+}
+function reset(){
+  stopTimer();st.ans={};st.submitted=false;st.left=TIME;st.started=false;
+  $('result').hidden=true;$('startBtn').disabled=false;$('startBtn').textContent='Bắt đầu';$('submitBtn').textContent='Nộp bài';
+  renderTimer();paintAll();save();window.scrollTo({top:0,behavior:'smooth'});
+}
+
+document.addEventListener('click',function(e){
+  var t=e.target.closest('button');if(!t)return;
+  if(t.classList.contains('opt'))pick(+t.dataset.q,+t.dataset.i);
+  else if(t.dataset.go){var el=$('q'+t.dataset.go);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+  else if(t.id==='startBtn'){st.running?stopTimer():startTimer();}
+  else if(t.id==='submitBtn'){
+    if(st.submitted){reset();return;}
+    var un=TOTAL-Object.keys(st.ans).length,cb=$('confirmBox');
+    cb.hidden=false;
+    cb.innerHTML='<span>'+(un?'Còn <b>'+un+'</b> câu chưa trả lời. ':'Bạn đã trả lời đủ 50 câu. ')+'Nộp bài ngay?</span><button type="button" class="btn pri" id="yesSub">Nộp bài</button><button type="button" class="btn ghost" id="noSub">Làm tiếp</button>';
+  }
+  else if(t.id==='yesSub')submit(false);
+  else if(t.id==='noSub')$('confirmBox').hidden=true;
+});
+$('practice').addEventListener('change',function(e){
+  st.practice=e.target.checked;
+  if(st.practice){stopTimer();$('startBtn').disabled=true;$('timer').textContent='--:--';}
+  else{$('startBtn').disabled=st.submitted;renderTimer();}
+  paintAll();save();
+});
+
+load();build();
+$('practice').checked=st.practice;
+if(st.practice){$('startBtn').disabled=true;$('timer').textContent='--:--';}else renderTimer();
+if(st.started&&!st.submitted&&!st.practice)$('startBtn').textContent='Tiếp tục';
+paintAll();
+if(st.submitted){$('startBtn').disabled=true;$('submitBtn').textContent='Làm lại';showResult(false);}
+</script>
+
+</body></html>
